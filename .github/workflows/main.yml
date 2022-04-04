@@ -16,7 +16,7 @@ jobs:
       #  uses: actions/checkout@v2
 
       - name: write
-        run: mkdir build; echo "<html><h1>Hello!</h1></html>" > build/index.html
+        run: mkdir build; echo "<html><h1>Hello World!</h1></html>" > build/index.html
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
