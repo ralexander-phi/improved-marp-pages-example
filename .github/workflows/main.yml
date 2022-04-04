@@ -3,8 +3,7 @@ on: push
 
 jobs:
   build:
-    container:
-      image: marpteam/marp-cli:v1.7.0
+    runs-on: ubuntu-latest
     steps:
 
       #- name: Checkout code
