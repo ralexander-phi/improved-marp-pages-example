@@ -1,0 +1,20 @@
+name: marp-to-pages
+on: push
+
+jobs:
+  build:
+    container:
+      image: marpteam/marp-cli:v1.7.0
+    steps:
+
+      #- name: Checkout code
+      #  uses: actions/checkout@v2
+
+      - name: write
+        run: mkdir build; echo "<html><h1>Hello!</h1></html>" > build/index.html
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./build/
+
