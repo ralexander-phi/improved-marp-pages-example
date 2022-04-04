@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      #- name: Checkout code
-      #  uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: write
-        run: mkdir build; echo "<html><h1>Hello!</h1></html>" > build/index.html
+        run: mkdir ./build; echo "<html><h1>Hello World!</h1></html>" > ./build/index.html; cat ./build/index.html
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
@@ -24,5 +24,4 @@ jobs:
           source-dir: ./build/
           preview-branch: gh-pages
           umbrella-dir: pr-preview
-          action: auto
 
