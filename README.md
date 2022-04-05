@@ -1,3 +1,11 @@
+<!--
+theme: gaia
+class:
+ - invert
+headingDivider: 2
+paginate: true
+-->
+
 # Title Page!
 
 # Content
