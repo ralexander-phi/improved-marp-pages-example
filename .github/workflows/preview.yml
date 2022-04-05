@@ -17,7 +17,8 @@ jobs:
 
       - name: Marp Build
         uses: marpteam/marp-cli:v1.7.0
-        run: node /home/marp/.cli/marp-cli.js README.md -o build/index.html
+        with:
+          args: README.md -o build/index.html
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
