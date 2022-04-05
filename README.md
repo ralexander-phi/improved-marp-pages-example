@@ -1,10 +1,10 @@
 # Title Page!
 
-## More Content
+# Content
 
 This is the first content slide
 
-## End
+# End
 
     fin
 
