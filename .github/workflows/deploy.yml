@@ -5,14 +5,15 @@ on:
     branches: [ main ]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    container:
+      image: marpteam/marp-cli:v1.7.0
     steps:
 
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: write
-        run: mkdir ./build; echo "<html><h1>Hello World!</h1></html>" > ./build/index.html; cat ./build/index.html
+      - name: Marp Build
+        run: node /home/marp/.cli/marp-cli.js README.md -o build/index.html
 
       - name: Deploy production
         uses: JamesIves/github-pages-deploy-action@v4
