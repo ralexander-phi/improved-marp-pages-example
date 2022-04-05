@@ -6,6 +6,12 @@ headingDivider: 2
 paginate: true
 -->
 
+
+<!--
+_class:
+ - lead
+ - invert
+-->
 # Title Page!
 
 # Content
@@ -14,5 +20,5 @@ This is the first content slide
 
 # End
 
-    fin
+&#128640;
 
