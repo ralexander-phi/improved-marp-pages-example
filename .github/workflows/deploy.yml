@@ -5,6 +5,7 @@ on:
     branches: [ main ]
 jobs:
   build:
+    runs-on: ubuntu-latest
     container:
       image: marpteam/marp-cli:v1.7.0
     steps:
