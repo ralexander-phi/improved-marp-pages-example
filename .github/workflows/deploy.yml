@@ -6,14 +6,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: marpteam/marp-cli:v1.7.0
     steps:
 
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Marp Build
+        uses: marpteam/marp-cli:v1.7.0
         run: node /home/marp/.cli/marp-cli.js README.md -o build/index.html
 
       - name: Deploy production
